@@ -1,6 +1,26 @@
-//- extends layout
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Помилка <%= error.status || 500 %></title>
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+</head>
+<body>
 
-//- block content
-//-   h1= message
-//-   h2= error.status
-//-   pre #{error.stack}
+
+    <main>
+        <h1>Помилка <%= error.status || 500 %></h1>
+        <p><%= error.message %></p>
+        <% if (error.stack) { %>
+            <pre><%= error.stack %></pre>
+        <% } %>
+    </main>
+
+    <footer>
+        <p>Відвідайте <a href="https://nodejs.org" target="_blank">Node.js</a> для більше інформації.</p>
+        <p><a href="/">Повернутися на головну сторінку</a></p>
+    </footer>
+
+</body>
+</html>
