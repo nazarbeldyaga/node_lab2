@@ -4,7 +4,6 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
-const PORT = process.env.PORT ?? 3001
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -41,6 +40,5 @@ app.use(function(err, req, res, next) {
   res.render('error', { title: "Помилка", message: err.message, error: err });
 });
 
-app.listen(PORT, () => console.log("Hello, World!"))
 
 module.exports = app;
