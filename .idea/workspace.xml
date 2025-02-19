@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e0602d1-0f8d-4475-b0fb-cd91b643bdf2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.developemnt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/dotenv/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/dotenv/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/dotenv/README-es.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/dotenv/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/dotenv/config.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/dotenv/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/dotenv/lib/cli-options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/dotenv/lib/env-options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/dotenv/lib/main.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/dotenv/lib/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/dotenv/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/about.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/about.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +61,7 @@
     "Node.js.bin\\www.executor": "Run",
     "Node.js.www.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -87,5 +105,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

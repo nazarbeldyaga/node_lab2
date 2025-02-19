@@ -9,38 +9,38 @@
 </head>
 <body>
 
-    <header>
-        <h1>Бригада №18</h1>
-        <nav>
-            <ul>
-                <li><a href="/about/nazar" class="<%= currentName === 'nazar' ? 'active' : '' %>">Про Назара</a></li>
-                <li><a href="/about/illya" class="<%= currentName === 'illya' ? 'active' : '' %>">Про Іллю</a></li>
-                <li><a href="/about/diana" class="<%= currentName === 'diana' ? 'active' : '' %>">Про Діану</a></li>
-                <li><a href="/about/vanya" class="<%= currentName === 'vanya' ? 'active' : '' %>">Про Ваню</a></li>
-                <li><a href="/about/esfer" class="<%= currentName === 'esfer' ? 'active' : '' %>">Про Есфера</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <h1>Бригада №18</h1>
+    <nav>
+        <ul>
+            <li><a href="/about/nazar" class="<%= currentName === 'nazar' ? 'active' : '' %>">Про Назара</a></li>
+            <li><a href="/about/illya" class="<%= currentName === 'illya' ? 'active' : '' %>">Про Іллю</a></li>
+            <li><a href="/about/diana" class="<%= currentName === 'diana' ? 'active' : '' %>">Про Діану</a></li>
+            <li><a href="/about/vanya" class="<%= currentName === 'vanya' ? 'active' : '' %>">Про Ваню</a></li>
+            <li><a href="/about/esfer" class="<%= currentName === 'esfer' ? 'active' : '' %>">Про Есфера</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main class="about">
-        <div class="arrow">
-            <a href="#" id="prevPage"><i class="fas fa-chevron-left"></i></a>
+<main class="about">
+    <div class="arrow">
+        <a href="#" id="prevPage"><i class="fas fa-chevron-left"></i></a>
+    </div>
+    <div class="person">
+        <img src="<%= person.photo %>" alt="<%= person.name %>" class="photo">
+        <div class="information">
+            <h1 class="name"><%= person.name %></h1>
+            <p class="description"><%= person.description %></p>
         </div>
-        <div class="person">
-            <img src="<%= person.photo %>" alt="<%= person.name %>" class="photo">
-            <div class="information">
-                <h1 class="name"><%= person.name %></h1>
-                <p class="description"><%= person.description %></p>
-            </div>
-        </div>
-        <div class="arrow">
-            <a href="#" id="nextPage"><i class="fas fa-chevron-right"></i></a>
-        </div>
-    </main>
+    </div>
+    <div class="arrow">
+        <a href="#" id="nextPage"><i class="fas fa-chevron-right"></i></a>
+    </div>
+</main>
 
-    <footer>
-        <p>Поверніться на <a href="/">головну</a>, щоб дізнатися про всю бригаду!</p>
-    </footer>
+<footer>
+    <p>Поверніться на <a href="/">головну</a>, щоб дізнатися про всю бригаду!</p>
+</footer>
 
 </body>
 
