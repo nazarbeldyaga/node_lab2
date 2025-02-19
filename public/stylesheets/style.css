@@ -3,18 +3,17 @@ body {
   font-family: 'Poppins', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
   text-align: center;
   color: #333;
 }
 
 html, body {
   height: 100%;
+  min-width: fit-content;
   display: flex;
   flex-direction: column;
   font-family: Arial, sans-serif;
   text-align: center;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
 }
 
 * {
@@ -25,27 +24,34 @@ html, body {
 
 /* Заголовки */
 h1 {
-  font-size: 2.5rem;
-  color: #444;
+  color: #734a4a;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 20px;
 }
 
 /* Стилі для header */
 header {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 225, 225, 0.8);
+  width: 100%;
+  padding: 2vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 1000;
 }
 
 nav ul {
   list-style: none;
+  margin-left: 15vw;
   padding: 0;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   gap: 15px;
 }
@@ -56,7 +62,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #222;
+  color: #734a4a;
   font-weight: bold;
   transition: 0.3s;
 }
@@ -79,6 +85,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 5.5vw 0;
+  background: linear-gradient(35deg, #ff9a9e, #fad0c4);
 }
 
 p {
@@ -87,7 +95,18 @@ p {
 }
 
 /* Стилі для зображення */
+
+a {
+  -webkit-user-drag: none;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
 img.photo {
+  margin: 2vw;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -97,13 +116,14 @@ img.photo {
 
 /* Стилі для футера */
 footer {
-  background: #2b2b2b;
+  background: #c16363;
   color: white;
-  padding: 20px;
+  padding: 1.8vw;
+
 }
 
 footer a {
-  color: #ff9a9e;
+  color: #ffa7ab;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
@@ -120,6 +140,10 @@ footer a:hover {
     font-size: 2rem;
   }
 
+  nav ul {
+    gap: 10vw;
+  }
+
   p {
     font-size: 1rem;
   }
@@ -130,9 +154,8 @@ footer a:hover {
 .team-gallery {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 5vw;
   flex-wrap: wrap;
-  padding: 20px;
 }
 
 .team-member {
@@ -149,7 +172,7 @@ footer a:hover {
 }
 
 .team-member img:hover {
-  transform: scale(1.1);
+  transform: scale(1.07);
   border-color: white;
 }
 
@@ -157,5 +180,61 @@ footer a:hover {
   margin-top: 8px;
   font-size: 18px;
   font-weight: bold;
-  color: #333;
+  color: #734a4a;
 }
+
+/*Окремі стилі для EJS*/
+.about {
+  padding: 2vw 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.person {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3vw;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.description {
+  color: #734a4a;
+}
+
+.arrow a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #ffff;
+  padding: 10px;
+  margin: 0 3vw;
+  border-radius: 50%;
+  background-color: #c16363;;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  transition: background-color 0.3s;
+}
+
+.arrow a:hover {
+  background-color: rgba(115,74,74,0.8);
+}
+
+.arrow i {
+  font-size: 20px;
+}
+
+
+

@@ -5,31 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= person.name %></title>
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <h1>Бригада №18</h1>
-        <nav>
-            <ul>
-                <li><a href="/about/nazar" class="<%= currentName === 'nazar' ? 'active' : '' %>">Про Назара</a></li>
-                <li><a href="/about/illya" class="<%= currentName === 'illya' ? 'active' : '' %>">Про Іллю</a></li>
-                <li><a href="/about/diana" class="<%= currentName === 'diana' ? 'active' : '' %>">Про Діану</a></li>
-                <li><a href="/about/vanya" class="<%= currentName === 'vanya' ? 'active' : '' %>">Про Ваню</a></li>
-                <li><a href="/about/esfer" class="<%= currentName === 'esfer' ? 'active' : '' %>">Про Есфера</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <h1>Бригада №18</h1>
+    <nav>
+        <ul>
+            <li><a href="/about/nazar" class="<%= currentName === 'nazar' ? 'active' : '' %>">Про Назара</a></li>
+            <li><a href="/about/illya" class="<%= currentName === 'illya' ? 'active' : '' %>">Про Іллю</a></li>
+            <li><a href="/about/diana" class="<%= currentName === 'diana' ? 'active' : '' %>">Про Діану</a></li>
+            <li><a href="/about/vanya" class="<%= currentName === 'vanya' ? 'active' : '' %>">Про Ваню</a></li>
+            <li><a href="/about/esfer" class="<%= currentName === 'esfer' ? 'active' : '' %>">Про Есфера</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main>
+<main class="about">
+    <div class="arrow">
+        <a href="#" id="prevPage"><i class="fas fa-chevron-left"></i></a>
+    </div>
+    <div class="person">
         <img src="<%= person.photo %>" alt="<%= person.name %>" class="photo">
-        <h1><%= person.name %></h1>
-        <p><%= person.description %></p>
-    </main>
+        <div class="information">
+            <h1 class="name"><%= person.name %></h1>
+            <p class="description"><%= person.description %></p>
+        </div>
+    </div>
+    <div class="arrow">
+        <a href="#" id="nextPage"><i class="fas fa-chevron-right"></i></a>
+    </div>
+</main>
 
-    <footer>
-        <p>Поверніться на <a href="/">головну</a>, щоб дізнатися про всю бригаду!</p>
-    </footer>
+<footer>
+    <p>Поверніться на <a href="/">головну</a>, щоб дізнатися про всю бригаду!</p>
+</footer>
 
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const pages = [
+            "/about/nazar", "/about/illya", "/about/diana", "/about/vanya", "/about/esfer"
+        ];
+
+        const currentPage = window.location.pathname;
+
+        const currentIndex = pages.indexOf(currentPage);
+
+        const prevPage = document.getElementById('prevPage');
+        const nextPage = document.getElementById('nextPage');
+
+        if (currentIndex > 0) {
+            prevPage.href = pages[currentIndex - 1];
+        } else {
+            prevPage.href = pages[pages.length - 1];
+        }
+
+        if (currentIndex < pages.length - 1) {
+            nextPage.href = pages[currentIndex + 1];
+        } else {
+            nextPage.href = pages[0];
+        }
+    });
+</script>
+
 </html>

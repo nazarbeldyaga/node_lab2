@@ -5,7 +5,7 @@ const people = {
     nazar: { name: "Назар", description: "???", photo: "/stylesheets/images/nazar.jpg" },
     illya: { name: "Ілля", description: "Самородок", photo: "/stylesheets/images/illya.jpg" },
     diana: { name: "Діана", description: "Нижній текст", photo: "/stylesheets/images/diana.jpg" },
-    vanya: { name: "Ваня", description: "Maybe it’s all going to be ok…Maybe it won’t🔒", photo: "/stylesheets/images/vanya.jpg" },
+    vanya: { name: "Ваня", description: "Незрозуміло, що він тут забув", photo: "/stylesheets/images/vanya.jpg" },
     esfer: { name: "Есфер", description: "Містєр татар", photo: "/stylesheets/images/esfer.jpg" }
 };
 
