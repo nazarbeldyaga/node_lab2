@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const people = {
-    nazar: { name: "Назар", description: "???", photo: "/stylesheets/images/nazar.jpg" },
+    nazar: { name: "Назар", description: "My Disappointment Is Immeasurable And My Day Is Ruined", photo: "/stylesheets/images/nazar.jpg" },
     illya: { name: "Ілля", description: "Самородок", photo: "/stylesheets/images/illya.jpg" },
     diana: { name: "Діана", description: "Нижній текст", photo: "/stylesheets/images/diana.jpg" },
     vanya: { name: "Ваня", description: "Незрозуміло, що він тут забув", photo: "/stylesheets/images/vanya.jpg" },

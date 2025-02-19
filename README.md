@@ -9,3 +9,8 @@
   Яковчук Іван ІП-31
   Усеінов Есфер ІП-31
 ==========
+
+
+Files that are registered in gitignore should be deleted on github, but I'm too lazy to do that. In general, it's better to add the folder with the photos to gitignore, because the repository is public.
+
+
