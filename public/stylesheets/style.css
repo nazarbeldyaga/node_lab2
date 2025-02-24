@@ -1,240 +1,310 @@
-/* Основні стилі */
-body {
-  font-family: 'Poppins', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  color: #333;
+/* Змінні */
+
+:root {
+    --white-color: #ffffff;
+
+    --main-font-color: #734a4a;
+    --main-background-color: #ff9a9e;
+    --secondary-background-color: #fad0c4;
+    --main-border-color: #333333;
+    
+    --shadow-color-10: #0000001a;
+    --shadow-color-20: #00000033;
+
+    --link-hover-color: #ff6b6b;
+
+    --header-background-color: #ffe1e1cc;
+    --header-font-color: #734a4acc;
+
+    --footer-background-color: #c16363;
+    --footer-font-color: #ffa7ab;
+
+    --scrollbar-thumb-color: #d44d2d;
+    --scrollbar-track-color: #d48b7a;
 }
 
-html, body {
-  height: 100%;
-  min-width: fit-content;
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
+/* Основні стилі */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Посилання */
+
+a {
+    text-decoration: none;
+    color: unset;
+    -webkit-user-drag: none;
 }
 
 /* Заголовки */
+
 h1 {
-  color: #734a4a;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+    font-size: 2.5rem;
+    color: var(--main-font-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 1.7rem;
+    }
 }
 
 /* Стилі для header */
+
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(255, 225, 225, 0.8);
-  width: 100%;
-  padding: 2vw;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-  top: 0;
-  z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--header-background-color);
+    width: 100%;
+    padding: 20px 30px;
+    box-shadow: 0 4px 6px var(--shadow-color-10);
 }
 
 nav ul {
-  list-style: none;
-  margin-left: 15vw;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+@media screen and (max-width: 767px) {
+    nav ul {
+        column-gap: 10vw;
+        row-gap: 10px;
+        flex-wrap: wrap;
+    }
 }
 
 nav ul li {
-  display: inline;
+    display: inline;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: #734a4a;
-  font-weight: bold;
-  transition: 0.3s;
+    text-decoration: none;
+    color: var(--main-font-color);
+    font-weight: 700;
+    transition: all 0.3s;
 }
 
 nav ul li a:hover {
-  color: #ff6b6b;
-  text-decoration: underline;
+    color: var(--link-hover-color);
+    text-decoration: underline;
 }
 
 nav ul li a.active {
-  color: #ff6b6b;
-  pointer-events: none;
-  font-weight: bold;
+    pointer-events: none;
+    font-weight: 700;
 }
 
 /* Основний контент */
 main {
-  flex: 1; /* Головна частина займає всю доступну висоту */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5.5vw 0;
-  background: linear-gradient(35deg, #ff9a9e, #fad0c4);
+    /* Головна частина займає всю доступну висоту */
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 0;
+    background: linear-gradient(35deg, var(--main-background-color), var(--secondary-background-color));
 }
 
 p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    p {
+        font-size: 1rem;
+    }
 }
 
 /* Стилі для зображення */
 
-a {
-  -webkit-user-drag: none;
-}
-
 img {
-  user-select: none;
-  -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 img.photo {
-  margin: 2vw;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 5px solid white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 2vw;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid var(--white-color);
+    box-shadow: 0 5px 15px var(--shadow-color-20);
+}
+
+@media screen and (max-width: 767px) {
+    img.photo {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 /* Стилі для футера */
 footer {
-  background: #c16363;
-  color: white;
-  padding: 1.8vw;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background: var(--footer-background-color);
+    color: var(--white-color);
 }
 
 footer a {
-  color: #ffa7ab;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+    font-weight: 700;
+    color: var(--footer-font-color);
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 footer a:hover {
-  color: white;
-  text-decoration: underline;
+    color: var(--white-color);
+    text-decoration: underline;
 }
 
-/* Адаптивність */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  nav ul {
-    gap: 10vw;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-}
-
-/* Зобоаження в основній частині */
+/* Зображення в основній частині */
 
 .team-gallery {
-  display: flex;
-  justify-content: center;
-  gap: 5vw;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    flex-wrap: wrap;
 }
 
-.team-member {
-  text-align: center;
+.team-member {    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.team-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--main-font-color);
 }
 
 .team-member img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 20px;
-  border: 3px solid #333;
-  transition: transform 0.3s, border-color 0.3s;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid var(--main-border-color);
+    transition: all 0.3s;
 }
 
-.team-member img:hover {
-  transform: scale(1.07);
-  border-color: white;
+.team-member:hover img {
+    transform: scale(1.1);
+    border-color: var(--white-color);
 }
 
-.team-member p {
-  margin-top: 8px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #734a4a;
+@media screen and (max-width: 767px) {
+    .team-member img {
+        width: 100px;
+        height: 100px;
+    }
 }
 
-/*Окремі стилі для EJS*/
+/* Окремі стилі для EJS */
+
 .about {
-  padding: 2vw 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .person {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 3vw;
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+@media screen and (max-width: 767px) {
+    .person {
+        flex-direction: column;
+        gap: 3vh;
+    }
 }
 
 .information {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
 .name {
-  letter-spacing: normal;
-  text-transform: none;
+    letter-spacing: normal;
+    text-transform: none;
 }
 
 .description {
-  color: #734a4a;
+    color: var(--main-font-color);
+    width: 30vw;
+    max-height: 30vh;
+    padding-right: 10px;
+    overflow-y: auto;
+    text-align: center;
 }
 
+@media screen and (max-width: 767px) {
+    .description {
+        width: 60vw;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color);
+    border-radius: 10px;
+  }
+
 .arrow a {
-  font-size: 24px;
-  text-decoration: none;
-  color: #ffff;
-  padding: 10px;
-  margin: 0 3vw;
-  border-radius: 50%;
-  background-color: #c16363;;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin: 0 3vw;
+    color: var(--white-color);
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: var(--footer-background-color);
+    transition: all 0.3s;
 }
 
 .arrow a:hover {
-  background-color: rgba(115,74,74,0.8);
+    filter: brightness(0.8);
 }
 
 .arrow i {
-  font-size: 20px;
+    font-size: 20px;
 }
-
-
-
